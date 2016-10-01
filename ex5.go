@@ -12,9 +12,13 @@ func main() {
   var in_file_name, out_file_name string
   if len(os.Args) > 1 {
     in_file_name = os.Args[1]
+  } else {
+    os.Exit(1)
   }
   if len(os.Args) > 2 {
     out_file_name = os.Args[2]
+  } else {
+    os.Exit(1)
   }
   fmt.Println(out_file_name)
   if in_file_name == out_file_name{
